@@ -12,3 +12,8 @@ body{
   display: grid;
   grid-template-rows: 0.25fr 0.75fr;
 }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}

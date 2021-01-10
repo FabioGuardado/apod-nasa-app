@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 //Components
-import { NavBar } from './components/AppComponents';
+import { NavBar, Content } from './components/AppComponents';
 
 //Resources
 import logo from './nasa-logo.svg';
@@ -35,13 +35,20 @@ function App() {
   
   return (
     <>
-    <div className="container">
-      <NavBar>
+    <div className="wrapper container">
+        <NavBar>
           <div className="title">
             <img src={logo} alt="logo" height="120px"/>
             <span>apod api</span>
           </div>
         </NavBar>
+
+        <Content>
+          <div className="image">
+            <img src={Data.url} alt={Data.title}/>
+          </div>
+          <div className="info"></div>
+        </Content>
       </div>
     </>
   );

@@ -21,3 +21,17 @@ export const NavBar = styled.div`
 
     }
 `;
+
+export const Content = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+
+    .image{
+
+        img {
+            max-width: 420px;
+            border: 1rem solid white;
+        }
+    }
+`;
