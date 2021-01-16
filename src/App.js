@@ -3,6 +3,7 @@ import axios from 'axios';
 
 //Components
 import { NavBar, Content } from './components/AppComponents';
+import Loader from './components/UI/Loader';
 
 //Resources
 import logo from './nasa-logo.svg';
@@ -38,17 +39,30 @@ function App() {
     <div className="wrapper container">
         <NavBar>
           <div className="title">
-            <img src={logo} alt="logo" height="120px"/>
+            <img src={logo} alt="logo"/>
             <span>apod api</span>
           </div>
         </NavBar>
 
-        <Content>
-          <div className="image">
-            <img src={Data.url} alt={Data.title}/>
-          </div>
-          <div className="info"></div>
-        </Content>
+        <div>
+          {
+            Object.keys(Data).length === 0 
+            ?
+              <Loader />
+            :
+              <Content>
+                <div className="image">
+                  <img src={Data.url} alt={Data.title}/>
+                </div>
+                <div className="info">
+                  <h2>{Data.title}</h2>
+                  <p className="date" >{Data.date}</p>
+                  <p>{Data.explanation}</p>
+                </div>
+              </Content>
+          }
+        </div>
+
       </div>
     </>
   );
