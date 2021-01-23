@@ -45,9 +45,44 @@ export const Content = styled.div`
     .image{
         /* transform: rotate(-8deg); */
         margin: 0 auto;
+
+        .img {
+            position: relative;
+        }
+        
         img {
             max-width: 340px;
             border: 1rem solid white;
+        }
+        .hover-div {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            p > i {
+                font-size: 3rem;
+            }
+            p{
+                text-transform: uppercase;
+                margin: 0.2rem 0;
+                font-family: 'Rubik', sans-serif;
+                font-weight: 400;
+                letter-spacing: 0.2rem;
+            }
+        }
+
+        .hidden {
+            display: none;
+            visibility: hidden;
         }
     }
     .info {
@@ -68,6 +103,9 @@ export const Content = styled.div`
             margin: 1rem 0;
             font-size: 1.1rem;
             font-weight: 300;
+        }
+        .copyright {
+            font-style: italic;
         }
     }
 
