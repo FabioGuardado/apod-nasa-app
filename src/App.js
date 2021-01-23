@@ -84,7 +84,7 @@ function App() {
                   {
                     Data.copyright
                     ?
-                      <p><span class="copyright">Copyright:</span> {Data.copyright}</p>
+                      <p><span className="copyright">Copyright:</span> {Data.copyright}</p>
                     :
                       null
                   }
@@ -101,10 +101,10 @@ function App() {
                 <Modal>
                   <div className="modal-header">
                     {/* <h2>Full size image</h2> */}
-                    <button onClick={handleClick}><span><i class="fas fa-times"></i></span><h2>close</h2></button>
+                    <button onClick={handleClick}><span><i className="fas fa-times"></i></span><h2>close</h2></button>
                   </div>
                   <div className="modal-body">
-                    <a href={Data.hdurl} target="_blank" rel="noreferrer"><img src={Data.hdurl} alt="HD image"/></a>
+                    <a href={Data.hdurl} target="_blank" rel="noreferrer"><img src={Data.hdurl} alt="High Definition"/></a>
                   </div>
                 </Modal>
               :
